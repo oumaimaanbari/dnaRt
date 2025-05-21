@@ -13,3 +13,7 @@ BugReports: https://github.com/oumaimaanbari/dnaRt/issues
 Imports: 
     seqinr,
     graphics
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
