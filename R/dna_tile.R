@@ -11,6 +11,7 @@
 #'
 #' @return Plot met DNA sequence tegel patroon.
 #' @importFrom graphics image
+#' @importFrom seqinr read.fasta
 #' @export
 #'
 #' @examples
@@ -20,9 +21,6 @@
 #'
 
 dna_tile <- function(file, n=NULL, kleurA="olivedrab3", kleurT="darkolivegreen", kleurC="cornsilk", kleurG="peachpuff2") {
-  if (!requireNamespace("seqinr", quietly = TRUE)) {
-    stop("Installeer package 'seqinr' met install.packages('seqinr')")
-  }
 
   seq <- toupper(seqinr::read.fasta(file)[[1]]) #omzetten uppercase basen
   seq <- seq[seq %in% c("A", "T", "G", "C")] #alleen ACGT

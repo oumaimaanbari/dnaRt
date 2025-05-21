@@ -2,3 +2,4 @@
 
 export(dna_tile)
 importFrom(graphics,image)
+importFrom(seqinr,read.fasta)
