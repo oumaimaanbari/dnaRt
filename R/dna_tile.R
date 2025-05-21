@@ -10,6 +10,7 @@
 #' @param kleurG Kleur voor base G. DEFAULT= "peachpuff2"
 #'
 #' @return Plot met DNA sequence tegel patroon.
+#' @importFrom graphics image
 #' @export
 #'
 #' @examples
@@ -22,9 +23,8 @@ dna_tile <- function(file, n=NULL, kleurA="olivedrab3", kleurT="darkolivegreen",
   if (!requireNamespace("seqinr", quietly = TRUE)) {
     stop("Installeer package 'seqinr' met install.packages('seqinr')")
   }
-  library(seqinr)
 
-  seq <- toupper(read.fasta(file)[[1]]) #omzetten uppercase basen
+  seq <- toupper(seqinr::read.fasta(file)[[1]]) #omzetten uppercase basen
   seq <- seq[seq %in% c("A", "T", "G", "C")] #alleen ACGT
 
   n_max <- floor(sqrt(length(seq))) # maximale mogleijke n berekening afgerond naar beneden
@@ -42,6 +42,6 @@ dna_tile <- function(file, n=NULL, kleurA="olivedrab3", kleurT="darkolivegreen",
   kleuren <- c(A=kleurA,T=kleurT, C=kleurC, G=kleurG)
   matrix <- matrix(seq[1:(n*n)],nrow=n, byrow = TRUE)
   gekleurd_matrix <- matrix(as.numeric(factor(matrix, levels = names(kleuren))),nrow = n) #numeric maken voor image()
-  image(1:n,1:n,gekleurd_matrix[n:1, ]
+  graphics::image(1:n,1:n,gekleurd_matrix[n:1, ]
         , col = kleuren, axes=FALSE, xlab="",ylab="")
 }
