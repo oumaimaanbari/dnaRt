@@ -12,7 +12,8 @@ URL: https://github.com/oumaimaanbari/dnaRt
 BugReports: https://github.com/oumaimaanbari/dnaRt/issues
 Imports: 
     seqinr,
-    graphics
+    graphics,
+    stats
 Suggests: 
     knitr,
     rmarkdown

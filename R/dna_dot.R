@@ -11,6 +11,7 @@
 #'
 #' @return Een stippen lijn plot
 #' @importFrom graphics plot points
+#' @importFrom stats runif
 #' @importFrom seqinr read.fasta
 #' @export
 #'
