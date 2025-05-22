@@ -1,8 +1,8 @@
 ---
-title: "dnaRt"
+title: "Visualisatie DNA met dnaRt"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{dnaRt}
+  %\VignetteIndexEntry{Visualisatie DNA met dnaRt}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,6 +14,46 @@ knitr::opts_chunk$set(
 )
 ```
 
+# Introduction
+
+Het dnaRt package biedt een creatieve manier aan om DNA te visualiseren in leuke plots. Elke functie visualiseert de verschillende basen op een unieke manier en geeft elke DNA sequentie een unieke plot.
+
+In dnaRt zitten 4 functies:
+
+- `dna_tile()` maakt een kleurrijk tegelpatroon
+- `dna_dots()` maakt een kleurrijk balk/punt patroon
+- `dna_spiral()` maakt een cirkel/spiraal patroon
+- `dna_shape()` maakt een vorm uit walk patroon
+
+# Voorbereiding
 ```{r setup}
 library(dnaRt)
+
+#temp file voor test
+fasta_path <- tempfile(fileext = ".fasta")
+cat(">demo\nATGCGTACGTAGC\n", file = fasta_path)
 ```
+
+# `dna_tile()`
+```{r}
+dna_tile(fasta_path)
+```
+Deze functie maakt een kleurrijk tegel raster met adjustable n, waarbij elke base een eigen kleur krijgt.
+
+# `dna_dot()`
+```{r}
+dna_dots(fasta_path)
+```
+Deze functie maakt een kleurrijke balk met punten met adjustable cex size, waarbij elke base een eigen kleur.
+
+# `dna_spiral()`
+```{r}
+dna_spiral(fasta_path)
+```
+Deze functie maakt een kleurrijke spiraal/cirkel vorm in adjustable pch shape en cex size, waarbij elke base een eigen kleur.
+
+# `dna_shape()`
+```{r}
+dna_shape(fasta_path)
+```
+Deze functie maakt een vorm op basis van walk patroon van de sequentie: omhoog (A), omlaag (T), links (C), of rechts (G) met adjustable kleur.
