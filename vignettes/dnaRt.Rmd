@@ -29,9 +29,8 @@ In dnaRt zitten 4 functies:
 ```{r setup}
 library(dnaRt)
 
-#temp file voor test
-fasta_path <- tempfile(fileext = ".fasta")
-cat(">demo\nATGCGTACGTAGC\n", file = fasta_path)
+#system file voor voorbeelden met CRH gen homo sapiens
+fasta_path <- system.file("extdata", "CRH_Homo_sapiens.fna", package = "dnaRt")
 ```
 
 
@@ -42,6 +41,8 @@ dna_tile(fasta_path)
 
 Deze functie maakt een kleurrijk tegel raster met adjustable n, waarbij elke base een eigen kleur krijgt.
 
+Adjustable parameters zijn de kleuren per base en de grootte van het raster. Het raster is n * n en neemt automatisch de grootste mogelijkheid, vul je een te grote n in krijg je een message met de n_max.
+
 
 # `dna_dot()`
 ```{r}
@@ -49,6 +50,8 @@ dna_dots(fasta_path, size = 10)
 ```
 
 Deze functie maakt een kleurrijke balk met punten met adjustable cex size, waarbij elke base een eigen kleur.
+
+Adjustable parameters zijn de kleuren per base en de grootte van de punten (cex).
 
 
 # `dna_spiral()`
@@ -58,11 +61,22 @@ dna_spiral(fasta_path)
 
 Deze functie maakt een kleurrijke spiraal/cirkel vorm in adjustable pch shape en cex size, waarbij elke base een eigen kleur.
 
+Adjustable parameters zijn de kleuren per base, de vorm van de punten (pch) en de grootte (cex).
+
 
 # `dna_shape()`
 ```{r}
 dna_shape(fasta_path)
 ```
 
-Deze functie maakt een vorm op basis van walk patroon van de sequentie: omhoog (A), omlaag (T), links (C), of rechts (G) met adjustable kleur.
+Deze functie maakt een vorm op basis van walk patroon van de sequentie: omhoog (A), omlaag (T), links (C), of rechts (G).
 
+De adjustable parameter is de kleur van de walk lijn.
+
+
+
+## Bronvermelding
+
+Sequentiefragment van het *CRH* gen bij *Homo sapiens*, afkomstig van NCBI Gene database (Gene ID: 1392):  
+<https://www.ncbi.nlm.nih.gov/gene/1392>  
+Geraadpleegd op 22 mei 2025.
