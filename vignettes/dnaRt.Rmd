@@ -29,8 +29,9 @@ In dnaRt zitten 4 functies:
 ```{r setup}
 library(dnaRt)
 
-#system file voor voorbeelden met CRH gen homo sapiens
-fasta_path <- system.file("extdata", "CRH_Homo_sapiens.fna", package = "dnaRt")
+#temp file voor voorbeelden met CRH gen homo sapiens
+fasta_path <- tempfile(fileext = ".fasta")
+cat(">CRH_homo_sapiens\n", paste(dnaRt:::crh_seq, collapse = "", "\n"), file = fasta_path)
 ```
 
 
