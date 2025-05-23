@@ -35,9 +35,5 @@ dna_tile(fasta_path)
 <img src="man/figures/README-example-1.png" width="100%" />
 
 Bekijk de vignette voor andere opties en de adjustable parameters zoals
-kleur en grootte.
-
-``` r
-vignette("dnaRt")
-#> Warning: vignette 'dnaRt' not found
-```
+kleur en grootte met `vignette("dnaRt")` na het volgen van installatie
+bovenaan in deze README.

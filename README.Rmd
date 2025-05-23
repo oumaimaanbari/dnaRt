@@ -41,8 +41,5 @@ cat(">test\nATGCGTACGTAGC\n", file = fasta_path)
 dna_tile(fasta_path)
 ```
 
-Bekijk de vignette voor andere opties en de adjustable parameters zoals kleur en grootte.
-
-```{r vignette}
-vignette("dnaRt")
-```
+Bekijk de vignette voor andere opties en de adjustable parameters zoals kleur en grootte met
+`vignette("dnaRt")` na het volgen van installatie bovenaan in deze README.
