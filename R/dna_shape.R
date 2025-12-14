@@ -2,7 +2,7 @@
 #'
 #' Visualiseert een DNA sequence als shapes walk patroon.
 #'
-#' @param file Path naar een FASTA of FNA file.
+#' @param file Character string pathway naar FASTA/FNA file e.g. "path/to/FNA"
 #' @param kleur Kleur van de plot. DEFAULT = "darkolivegreen3"
 #'
 #' @return Een shape plot van de DNA sequence.

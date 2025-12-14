@@ -2,7 +2,7 @@
 #'
 #' Visualiseert een DNA sequence als een spiraal waarbij elke base een unieke zelfgekozen kleur krijgt.
 #'
-#' @param file Pathway naar FASTA/FNA file
+#' @param file Character string pathway naar FASTA/FNA file e.g. "path/to/FNA"
 #' @param kleurA Kleur voor base A. DEFAULT= "pink"
 #' @param kleurT Kleur voor base T. DEFAULT= "darkolivegreen1"
 #' @param kleurC Kleur voor base C. DEFAULT= "cornsilk"

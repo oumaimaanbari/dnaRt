@@ -7,7 +7,7 @@
 dna_shape(file, kleur = "darkolivegreen3")
 }
 \arguments{
-\item{file}{Path naar een FASTA of FNA file.}
+\item{file}{Character string pathway naar FASTA/FNA file e.g. "path/to/FNA"}
 
 \item{kleur}{Kleur van de plot. DEFAULT = "darkolivegreen3"}
 }

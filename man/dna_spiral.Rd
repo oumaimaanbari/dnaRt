@@ -15,7 +15,7 @@ dna_spiral(
 )
 }
 \arguments{
-\item{file}{Pathway naar FASTA/FNA file}
+\item{file}{Character string pathway naar FASTA/FNA file e.g. "path/to/FNA"}
 
 \item{kleurA}{Kleur voor base A. DEFAULT= "pink"}
 

@@ -14,7 +14,7 @@ dna_tile(
 )
 }
 \arguments{
-\item{file}{Pathway naar FASTA/FNA file}
+\item{file}{Character string pathway naar FASTA/FNA file e.g. "path/to/FNA"}
 
 \item{n}{Grootte van het raster (n*n). DEFAULT= n max}
 

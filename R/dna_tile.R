@@ -2,7 +2,7 @@
 #'
 #' Visualiseert een DNA sequence als een tile waarbij elke base een unieke zelfgekozen kleur krijgt.
 #'
-#' @param file Pathway naar FASTA/FNA file
+#' @param file Character string pathway naar FASTA/FNA file e.g. "path/to/FNA"
 #' @param n Grootte van het raster (n*n). DEFAULT= n max
 #' @param kleurA Kleur voor base A. DEFAULT= "olivedrab3"
 #' @param kleurT Kleur voor base T. DEFAULT= "darkolivegreen"
